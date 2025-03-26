@@ -1,121 +1,161 @@
-# Sharencrypt - Secure Peer-to-Peer File Sharing
+# 🔒 Sharencrypt - Secure Peer-to-Peer File Sharing
 
-This project demonstrates how to establish reliable peer-to-peer connections without using WebRTC, using a custom relay server approach.
+This project demonstrates how to establish reliable peer-to-peer connections **without WebRTC**, using a **custom relay server** approach. 🚀
 
-## Features
+---
 
-- Direct communication between two or more users
-- Secure data transfer with end-to-end encryption
-- Cross-browser and cross-platform compatibility
-- NAT/firewall traversal through relay servers
-- Automatic reconnection and fallback mechanisms
-- File transfer with progress tracking
+## ✨ Features
 
-## Architecture
+✅ **Direct communication** between two or more users  
+✅ **Secure data transfer** with end-to-end encryption 🔐  
+✅ **Cross-browser & cross-platform** compatibility 🌍  
+✅ **NAT/firewall traversal** through relay servers 🏗️  
+✅ **Automatic reconnection & fallback mechanisms** 🔄  
+✅ **File transfer with progress tracking** 📂📊  
 
-The solution uses a hybrid approach:
+---
 
-1. **Relay Server**: A WebSocket server that facilitates communication between peers
-2. **Client Library**: A JavaScript library that handles connections, encryption, and data transfer
-3. **Fallback Mechanisms**: Automatic reconnection and error handling
+## 🏗️ Architecture
 
-## Getting Started
+This solution employs a **hybrid approach**:
 
-### Prerequisites
+1️⃣ **Relay Server**: A WebSocket server facilitating communication between peers  
+2️⃣ **Client Library**: A JavaScript library handling connections, encryption, and data transfer  
+3️⃣ **Fallback Mechanisms**: Automatic reconnection & error handling to ensure a smooth experience 🔄  
 
-- Node.js 14.x or higher
-- npm or yarn
+---
 
-### Installation
+## 🚀 Getting Started
 
-1. Clone the repository
-2. Install dependencies:
+### 🔧 Prerequisites
 
-```bash
-npm install
-```
+- 📌 Node.js **14.x** or higher  
+- 📌 **npm** or **yarn** installed  
 
-3. Start the relay server:
+### 📥 Installation
 
-```bash
-npm run start-relay
-```
+1️⃣ Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/sharencrypt.git
+   cd sharencrypt
+   ```
 
-4. Start the development server:
+2️⃣ Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-```
+3️⃣ Start the relay server:
+   ```bash
+   npm run start-relay
+   ```
 
-## How It Works
+4️⃣ Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-### Connection Establishment
+---
 
-1. Both peers connect to the relay server via WebSockets
-2. Peer A initiates a connection request to Peer B through the relay server
-3. Peer B accepts the connection request
-4. Both peers can now exchange data through the relay server
+## 🔄 How It Works
 
-### Data Transfer
+### 🔗 Connection Establishment
 
-1. Data is encrypted on the sender's side using AES-GCM
-2. Encrypted data is split into chunks and sent through the relay server
-3. Receiver reassembles the chunks and decrypts the data
-4. Large files are transferred with progress tracking
+1️⃣ Both peers **connect** to the relay server via WebSockets 🌐  
+2️⃣ **Peer A** initiates a connection request to **Peer B** via the relay server 📩  
+3️⃣ **Peer B** accepts the request ✅  
+4️⃣ Both peers can now exchange data **securely** through the relay server 🔒  
 
-### Security
+### 📤 Data Transfer
 
-- All data is encrypted end-to-end using AES-GCM
-- Encryption keys are generated for each session
-- No data is stored on the relay server
+🔹 Data is **encrypted** on the sender’s side using **AES-GCM** 🔐  
+🔹 **Encrypted data** is split into **chunks** and sent through the relay server 📦  
+🔹 The receiver **reassembles** and **decrypts** the data 🔓  
+🔹 Large files are transferred with **progress tracking** 📊  
 
-## Deployment
+---
 
-### Relay Server
+## 🛡️ Security
 
-The relay server can be deployed to any Node.js hosting platform:
+🔒 **End-to-End Encryption** with AES-GCM  
+🔑 **Unique Encryption Keys** for each session  
+🚫 **No Data Storage** on the relay server  
 
-1. **Heroku**:
+---
+
+## 🌍 Deployment
+
+### 📡 Relay Server
+
+Deploy the relay server to any **Node.js hosting platform**:
+
+✅ **Heroku**:
    ```bash
    heroku create
    git push heroku main
    ```
 
-2. **DigitalOcean**:
-   Deploy using App Platform or a Droplet
+✅ **DigitalOcean**:
+   Deploy using **App Platform** or a **Droplet** 🖥️  
 
-3. **AWS**:
-   Deploy to EC2, Elastic Beanstalk, or Lambda with API Gateway
+✅ **AWS**:
+   Deploy to **EC2**, **Elastic Beanstalk**, or **Lambda with API Gateway** ☁️  
 
-### Client Application
+### 🖥️ Client Application
 
-The client application can be deployed to any static hosting service:
+Deploy the client application to any **static hosting service**:
 
-1. **Netlify**:
+✅ **Netlify**:
    ```bash
    npm run build
    netlify deploy
    ```
 
-2. **Vercel**:
+✅ **Vercel**:
    ```bash
    npm run build
    vercel
    ```
 
-## Performance Considerations
+---
 
-- **Bandwidth**: The relay server requires sufficient bandwidth to handle all connections
-- **Latency**: Using a relay server adds some latency compared to direct WebRTC connections
-- **Scalability**: For large-scale deployments, consider using multiple relay servers with load balancing
+## ⚡ Performance Considerations
 
-## Limitations
+🚀 **Bandwidth**: The relay server requires **sufficient bandwidth** to handle all connections  
+⏳ **Latency**: Using a relay server **adds some delay** compared to direct WebRTC connections  
+📈 **Scalability**: For **large-scale deployments**, consider using **multiple relay servers** with load balancing  
 
-- Higher latency compared to WebRTC
-- Increased server costs due to relay traffic
-- No UDP support (TCP only)
-- No direct peer-to-peer connections
+---
 
-## License
+## ⚠️ Limitations
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+❌ **Higher latency** compared to WebRTC ⚡  
+❌ **Increased server costs** due to relay traffic 💸  
+❌ **No UDP support** (TCP only) 🛑  
+❌ **No direct peer-to-peer connections** 🔗🚫  
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** 📜 - see the [LICENSE](./LICENSE) file for details.
+
+---
+
+## 👥 Authors
+
+### Vishvam Joshi  
+[![GitHub](https://img.shields.io/badge/GitHub-000?logo=github&logoColor=white)](https://github.com/vishvam12a)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://linkedin.com/in/vishvam-j-joshi) 
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://instagram.com/vishvam.joshi.71)
+
+### Pragnesh Singh  
+[![GitHub](https://img.shields.io/badge/GitHub-000?logo=github&logoColor=white)](https://github.com/pragnesh-singh-rajput)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://linkedin.com/in/pragnesh-singh-rajput) 
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://instagram.com/pragnesh_singh_rajput)
+
+### Hardik Singh  
+[![GitHub](https://img.shields.io/badge/GitHub-000?logo=github&logoColor=white)](https://github.com/singhhardik531)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://linkedin.com/in/hardik--singh) 
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://instagram.com/imhardiksinghh)
+
