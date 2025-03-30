@@ -9,13 +9,10 @@ const RECONNECT_ATTEMPTS = 3;
 
 // Get the WebSocket URL based on the current environment
 const getWebSocketUrl = () => {
-  const isProduction = import.meta.env.PROD;
-  if (isProduction) {
-    // In production, use a secure WebSocket connection
-    return `wss://${window.location.hostname}/ws`;
-  }
-  // In development, use local WebSocket server
-  return `ws://${window.location.hostname}:8080`;
+  const protocol = window.location.protocol === "https:" ? "wss" : "ws";
+  const port = window.location.protocol === "https:" ? "" : ":8080"; // Use port only in development
+
+  return `${protocol}://${window.location.hostname}${port}/ws`;
 };
 
 const RELAY_SERVER_URL = getWebSocketUrl();
