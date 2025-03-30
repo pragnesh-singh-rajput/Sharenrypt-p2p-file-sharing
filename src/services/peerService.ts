@@ -8,12 +8,8 @@ const CONNECTION_TIMEOUT = 15000; // 15 seconds
 const RECONNECT_ATTEMPTS = 3;
 
 // Get the WebSocket URL based on the current environment
-const getWebSocketUrl = () => {
-  const protocol = window.location.protocol === "https:" ? "wss" : "ws";
-  const port = window.location.protocol === "https:" ? "" : ":8080"; // Use port only in development
+const getWebSocketUrl = () => "wss://sharenrypt-p2p-file-sharing.onrender.com/ws";
 
-  return `${protocol}://${window.location.hostname}${port}/ws`;
-};
 
 const RELAY_SERVER_URL = getWebSocketUrl();
 
