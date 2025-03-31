@@ -138,7 +138,7 @@ Deploy the client application to any **static hosting service**:
 
 ## 📜 License
 
-This project is licensed under the **GNU 3.0 & MIT License** 📜 - see the [LICENSE-GNU](./LICENSE-GNU) [LICENSE-MIT](./LICENSE-MIT) file for details.
+This project is licensed under the **GNU 3.0 & MIT License** 📜 - see the [LICENSE-GNU](./LICENSE-GNU) **&** [LICENSE-MIT](./LICENSE-MIT) file for details.
 
 ---
 
